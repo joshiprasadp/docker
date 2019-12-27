@@ -5,8 +5,8 @@ services :
 before_install:
     -   docker build -t joshiprasadp/frontend .
 
-script:
-    -   docker run -e CI=true joshiprasadp/frontend npm run test
+# script:
+#     -   docker run -e CI=true joshiprasadp/frontend npm run test
 
 deploy:
     provider: azure_web_apps
