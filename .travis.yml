@@ -7,3 +7,10 @@ before_install:
 
 script:
     -   docker run -e CI=true joshiprasadp/frontend npm run test
+
+deploy:
+    provider: azure_web_apps
+    username: joshiprasadp       # If AZURE_WA_USERNAME isn't set
+    password: Aarya@2020   # If AZURE_WA_PASSWORD isn't set
+    site: https://docker-pjoshi3.azurewebsites.net       # If AZURE_WA_SITE isn't set
+    slot: docker-pjoshi3       # (optional) If AZURE_WA_SLOT isn't set
