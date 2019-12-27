@@ -4,7 +4,7 @@ services :
 
 before_install:
     -   gem install bundler
-    -   docker build -t joshiprasadp/frontend -f dockerfile
+    -   docker build .
 
 # script:
 #     -   docker run -e CI=true joshiprasadp/frontend npm run test
