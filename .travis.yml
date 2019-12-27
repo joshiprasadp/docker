@@ -3,7 +3,7 @@ services :
     -   docker
 
 before_install:
-    -   docker buid -t joshiprasadp/frontend -f dockerfile.dev .
+    -   docker build -t joshiprasadp/frontend -f dockerfile.dev .
 
 script:
     -   docker run -e CI=true joshiprasadp/frontend npm run test
